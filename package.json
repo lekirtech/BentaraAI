@@ -1,11 +1,11 @@
 {
-  "name": "clara-verse",
+  "name": "BentaraAi",
   "version": "0.1.4",
   "private": true,
-  "description": "Clara – A privacy-first, client-side AI assistant WebUI for LLMs. No backend, no data leaks. Keep your conversations completely yours, If you like it, Don't Forget to Give a Star 🌟",
+  "description": "Bentara AI – A privacy-first, client-side AI assistant WebUI for LLMs. No backend, no data leaks. Keep your conversations completely yours, If you like it, Don't Forget to Give a Star 🌟",
   "author": {
-    "name": "Claraverse Labs",
-    "email": "claraverse.space@gmail.com"
+    "name": "Al khan Abdul Gani",
+    "email": "alkhan@lekir.tech"
   },
   "type": "module",
   "main": "electron/main.cjs",
@@ -234,8 +234,8 @@
     "canvas": "npm:canvas-prebuilt@^2.11.2"
   },
   "build": {
-    "appId": "com.clara-ai.app",
-    "productName": "Clara",
+    "appId": "com.lekirtech.BentaraAi",
+    "productName": "Bentara Ai",
     "npmRebuild": false,
     "buildDependenciesFromSource": false,
     "files": [
@@ -287,8 +287,8 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "badboysm890",
-      "repo": "ClaraVerse",
+      "owner": "lekirtech",
+      "repo": "BentaraAI",
       "releaseType": "release",
       "private": false
     },
@@ -381,7 +381,7 @@
       "uninstallerIcon": "assets/icons/win/icon.ico",
       "installerHeaderIcon": "assets/icons/win/icon.ico",
       "createStartMenuShortcut": true,
-      "shortcutName": "Clara",
+      "shortcutName": "BentaraAI",
       "license": "LICENSE",
       "deleteAppDataOnUninstall": true
     },

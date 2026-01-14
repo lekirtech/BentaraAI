@@ -3039,13 +3039,14 @@ function registerN8NHandlers() {
   // Check N8N service status
   ipcMain.handle('n8n:check-service-status', async () => {
     try {
-      if (!dockerSetup) {
-        return { running: false, error: 'Docker setup not initialized' };
-      }
+      // if (!dockerSetup) {
+      //   return { running: false, error: 'Docker setup not initialized' };
+      // }
 
       // Check service configuration mode
       let n8nRunning = false;
-      let serviceUrl = 'http://localhost:5678';
+      //let serviceUrl = 'http://localhost:5678';
+      let serviceUrl = 'https://assistnify.onrender.com/';
       
       if (serviceConfigManager && typeof serviceConfigManager.getServiceMode === 'function') {
         try {

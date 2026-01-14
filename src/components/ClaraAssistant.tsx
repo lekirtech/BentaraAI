@@ -683,7 +683,7 @@ const ClaraAssistant: React.FC<ClaraAssistantProps> = ({ onPageChange }) => {
     phase: string | null;
   }> => {
     try {
-      // Check Clara's Pocket service status - check regardless of current provider setting
+      // Check BentaraAi's Pocket service status - check regardless of current provider setting
       // since during startup the provider might not be set yet
       if (window.llamaSwap) {
         const status = await window.llamaSwap.getStatus?.();
@@ -693,7 +693,7 @@ const ClaraAssistant: React.FC<ClaraAssistantProps> = ({ onPageChange }) => {
           console.log(`🚀 Service starting detected: ${status.currentStartupPhase || 'Initializing...'}`);
           return {
             isStarting: true,
-            serviceName: "Clara's Core",
+            serviceName: "BentaraAi's Core",
             phase: status.currentStartupPhase || 'Initializing...'
           };
         }
@@ -705,7 +705,7 @@ const ClaraAssistant: React.FC<ClaraAssistantProps> = ({ onPageChange }) => {
           if (status.startingTimestamp && (Date.now() - status.startingTimestamp) < 30000) {
             return {
               isStarting: true,
-              serviceName: "Clara's Core",
+              serviceName: "BentaraAi's Core",
               phase: 'Loading models...'
             };
           }
@@ -917,7 +917,7 @@ const ClaraAssistant: React.FC<ClaraAssistantProps> = ({ onPageChange }) => {
     loadWallpaper();
   }, []);
 
-  // Track Clara's visibility state for background service
+  // Track BentaraAi's visibility state for background service
   useEffect(() => {
     claraBackgroundService.setBackgroundMode(!isVisible);
   }, [isVisible]);
@@ -1032,11 +1032,11 @@ const ClaraAssistant: React.FC<ClaraAssistantProps> = ({ onPageChange }) => {
         let allModels: ClaraModel[] = [];
         for (const provider of loadedProviders) {
           try {
-            // Special handling for Clara's Pocket provider - wait for service to be ready
+            // Special handling for BentaraAi's Pocket provider - wait for service to be ready
             if (provider.type === 'claras-pocket' && window.llamaSwap) {
               const status = await window.llamaSwap.getStatus?.();
               if (status?.isStarting) {
-                console.log(`⏳ Clara's Core is starting, skipping model loading for now...`);
+                console.log(`⏳ BentaraAi's Core is starting, skipping model loading for now...`);
                 // Don't load models yet, they will be loaded once startup completes
                 continue;
               }
@@ -1065,15 +1065,15 @@ const ClaraAssistant: React.FC<ClaraAssistantProps> = ({ onPageChange }) => {
         // Get primary provider and set it in config
         const primaryProvider = loadedProviders.find(p => p.isPrimary) || loadedProviders[0];
         if (primaryProvider) {
-          // AUTO-START CLARA'S POCKET IF IT'S THE PRIMARY PROVIDER
+          // AUTO-START BentaraAi's POCKET IF IT'S THE PRIMARY PROVIDER
           if (primaryProvider.type === 'claras-pocket' && window.llamaSwap) {
             try {
-              console.log("🚀 Checking Clara's Core status on startup...");
+              console.log("🚀 Checking BentaraAi's Core status on startup...");
               const status = await window.llamaSwap.getStatus?.();
               if (!status?.isRunning) {
-                console.log("🔄 Clara's Core is not running, starting automatically...");
+                console.log("🔄 BentaraAi's Core is not running, starting automatically...");
                 addInfoNotification(
-                  "Starting Clara's Core...",
+                  "Starting BentaraAi's Core...",
                   'Clara is starting up her local AI service for you. This may take a moment.',
                   6000
                 );
@@ -1081,15 +1081,15 @@ const ClaraAssistant: React.FC<ClaraAssistantProps> = ({ onPageChange }) => {
                 const result = await window.llamaSwap.start();
                 if (!result.success) {
                   addErrorNotification(
-                    "Failed to Start Clara's Core",
+                    "Failed to Start BentaraAi's Core",
                     result.error || 'Could not start the local AI service. Please check your installation.',
                     10000
                   );
-                  console.error("❌ Failed to start Clara's Core:", result.error);
+                  console.error("❌ Failed to start BentaraAi's Core:", result.error);
                 } else {
-                  console.log("✅ Clara's Core started successfully");
+                  console.log("✅ BentaraAi's Core started successfully");
                   addInfoNotification(
-                    "Clara's Core Ready",
+                    "BentaraAi's Core Ready",
                     'Your local AI service is now running and ready to chat!',
                     4000
                   );
@@ -1097,17 +1097,17 @@ const ClaraAssistant: React.FC<ClaraAssistantProps> = ({ onPageChange }) => {
                   await new Promise(res => setTimeout(res, 2000));
                 }
               } else {
-                console.log("✅ Clara's Core is already running");
+                console.log("✅ BentaraAi's Core is already running");
                 addInfoNotification(
-                  "Clara's Core Online",
+                  "BentaraAi's Core Online",
                   'Your local AI service is ready and waiting for your messages.',
                   3000
                 );
               }
             } catch (err) {
-              console.error("⚠️ Error checking/starting Clara's Core:", err);
+              console.error("⚠️ Error checking/starting BentaraAi's Core:", err);
               addErrorNotification(
-                "Clara's Core Startup Error",
+                "BentaraAi's Core Startup Error",
                 err instanceof Error ? err.message : 'Could not communicate with the local AI service.',
                 8000
               );
@@ -2465,42 +2465,42 @@ You can:
       // POCKET PROVIDER AUTO-START LOGIC
       if (provider.type === 'claras-pocket' && window.llamaSwap) {
         try {
-          console.log("🚀 Switching to Clara's Core - checking status...");
+          console.log("🚀 Switching to BentaraAi's Core - checking status...");
           // Check if running
           const status = await window.llamaSwap.getStatus?.();
           if (!status?.isRunning) {
-            console.log("🔄 Clara's Core is not running, starting for provider switch...");
+            console.log("🔄 BentaraAi's Core is not running, starting for provider switch...");
             addInfoNotification(
-              "Starting Clara's Core...",
+              "Starting BentaraAi's Core...",
               'Clara is starting up her local AI service. Please wait a moment.',
               6000
             );
             const result = await window.llamaSwap.start();
             if (!result.success) {
               addErrorNotification(
-                "Failed to Start Clara's Core",
+                "Failed to Start BentaraAi's Core",
                 result.error || 'Could not start the local AI service. Please check your installation.',
                 10000
               );
-              console.error("❌ Failed to start Clara's Core for provider switch:", result.error);
+              console.error("❌ Failed to start BentaraAi's Core for provider switch:", result.error);
               setIsLoadingProviders(false);
               return;
             }
-            console.log("✅ Clara's Core started successfully for provider switch");
+            console.log("✅ BentaraAi's Core started successfully for provider switch");
             addInfoNotification(
-              "Clara's Core Ready",
+              "BentaraAi's Core Ready",
               'Local AI service is now running and ready!',
               3000
             );
             // Wait a moment for service to be ready
             await new Promise(res => setTimeout(res, 2000));
           } else {
-            console.log("✅ Clara's Core is already running for provider switch");
+            console.log("✅ BentaraAi's Core is already running for provider switch");
           }
         } catch (err) {
-          console.error("⚠️ Error starting Clara's Core for provider switch:", err);
+          console.error("⚠️ Error starting BentaraAi's Core for provider switch:", err);
           addErrorNotification(
-            "Clara's Core Startup Error",
+            "BentaraAi's Core Startup Error",
             err instanceof Error ? err.message : 'Could not communicate with the local AI service.',
             8000
           );
@@ -4352,7 +4352,7 @@ ${data.timezone ? `• **Timezone:** ${data.timezone}` : ''}`;
           />
         </>
       ) : (
-        /* Clara's Brain Dashboard */
+        /* BentaraAi's Brain Dashboard */
         <ClaraBrainDashboard />
       )}
             </div>
@@ -4420,7 +4420,7 @@ ${data.timezone ? `• **Timezone:** ${data.timezone}` : ''}`;
                 </>
               ) : (
                 <>
-                  You don't seem to have any AI models downloaded yet. To start chatting with Clara, 
+                  You don't seem to have any AI models downloaded yet. To start chatting With BentaraAi, 
                   you'll need to download at least one model from the Model Manager.
                 </>
               )}

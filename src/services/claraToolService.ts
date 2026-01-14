@@ -180,7 +180,7 @@ export class ClaraToolService {
           continue;
         }
 
-        // Try to execute with Clara tools first
+        // Try to execute With BentaraAi tools first
         const claraTool = defaultTools.find(tool => tool.name === functionName || tool.id === functionName);
         
         if (claraTool) {

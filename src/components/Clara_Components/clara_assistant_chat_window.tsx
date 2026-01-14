@@ -540,7 +540,7 @@ const WelcomeScreen: React.FC<{
           </div>
           
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-            Welcome{userName ? ` back, ${userName}` : ''} to Clara! 
+            Welcome{userName ? ` back, ${userName}` : ''} to BentaraAi! 
             <Sparkles className="inline-block w-6 h-6 ml-2 text-sakura-500" />
           </h1>
           

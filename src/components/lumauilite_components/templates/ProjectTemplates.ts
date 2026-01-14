@@ -1,5 +1,5 @@
 // Project Templates for LumaUI-lite
-// Each template includes HTML, CSS, and JavaScript with Clara's font and stunning designs
+// Each template includes HTML, CSS, and JavaScript With BentaraAi's font and stunning designs
 
 export interface ProjectTemplate {
   html: string;
@@ -177,7 +177,7 @@ const getLandingPageTemplate = (name: string, description: string): ProjectTempl
         <div class="max-w-7xl mx-auto px-4 text-center">
             <div class="flex justify-center items-center mb-4">
                 <i class="fas fa-heart text-sakura-400 mx-2"></i>
-                <span class="text-white">Built with Clara's LumaUI-lite</span>
+                <span class="text-white">Built With BentaraAi's LumaUI-lite</span>
                 <i class="fas fa-heart text-sakura-400 mx-2"></i>
             </div>
             <p class="text-gray-300">© ${new Date().getFullYear()} ${name}. All rights reserved.</p>

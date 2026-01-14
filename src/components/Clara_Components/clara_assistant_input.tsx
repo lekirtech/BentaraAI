@@ -810,7 +810,7 @@ const OverflowMenu: React.FC<{
                 )}
               </div>
               <div className="text-xs text-gray-500 dark:text-gray-400">
-                {isScreenSharing ? 'Stop sharing your screen' : 'Share your screen with Clara'}
+                {isScreenSharing ? 'Stop sharing your screen' : 'Share your screen With BentaraAi'}
               </div>
             </div>
             {isScreenSharing && (

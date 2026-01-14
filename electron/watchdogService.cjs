@@ -53,7 +53,7 @@ class WatchdogService extends EventEmitter {
     
     // Clara Core is always enabled
     this.services.clarasCore = {
-      name: "Clara's Core",
+      name: "BentaraAi's Core",
       status: 'unknown',
       lastCheck: null,
       lastHealthyTime: null, // Track when service was last confirmed healthy

@@ -60,7 +60,7 @@ const AIServicesTab: React.FC<AIServicesTabProps> = ({
       case 'ollama':
         return { baseUrl: 'http://localhost:11434/v1', name: 'Ollama' };
       case 'claras-pocket':
-        return { baseUrl: 'http://localhost:8091/v1', name: "Clara's Core" };
+        return { baseUrl: 'http://localhost:8091/v1', name: "BentaraAi's Core" };
       default:
         return { baseUrl: '', name: '' };
     }

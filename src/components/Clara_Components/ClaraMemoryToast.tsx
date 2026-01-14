@@ -335,7 +335,7 @@ const ClaraMemoryToast: React.FC<ClaraMemoryToastProps> = ({
       {/* Main toast container - Dark theme */}
       <div className="bg-black/95 backdrop-blur-xl rounded-2xl shadow-2xl p-4 min-w-[280px]">
         
-        {/* Header with Clara's face */}
+        {/* Header With BentaraAi's face */}
         <div className="flex items-start gap-3 mb-3">
           <ClaraFace 
             isLearning={isVisible && !isLeaving}

@@ -27,10 +27,10 @@ class ClaraBackgroundService {
       this.notifyListeners();
       
       if (isBackground) {
-        console.log('🔄 Clara is now running in background mode');
+        console.log('🔄 BentaraAi is now running in background mode');
         this.createPersistentNotification();
       } else {
-        console.log('👁️ Clara is now in foreground mode');
+        console.log('👁️ BentaraAi is now in foreground mode');
         this.removePersistentNotification();
       }
     }
@@ -46,8 +46,8 @@ class ClaraBackgroundService {
     // Create new persistent notification
     this.persistentNotificationId = notificationService.addNotification({
       type: 'info',
-      title: 'Clara Assistant Active',
-      message: 'Clara is running in the background and ready to assist you.',
+      title: 'BentaraAi Assistant Active',
+      message: 'BentaraAi is running in the background and ready to assist you.',
       duration: undefined, // Persistent - no auto-dismiss
       sound: false // Don't play sound for background service notification
     });
@@ -75,12 +75,12 @@ class ClaraBackgroundService {
       this.removePersistentNotification();
       
       const activityText = this.hasBackgroundActivity() 
-        ? `Clara is processing ${this.backgroundActivityCount} background task${this.backgroundActivityCount > 1 ? 's' : ''}.`
-        : 'Clara is ready to assist you in the background.';
+        ? `BentaraAi is processing ${this.backgroundActivityCount} background task${this.backgroundActivityCount > 1 ? 's' : ''}.`
+        : 'BentaraAi is ready to assist you in the background.';
       
       this.persistentNotificationId = notificationService.addNotification({
         type: 'info',
-        title: 'Clara Assistant Active',
+        title: 'BentaraAi Assistant Active',
         message: activityText,
         duration: undefined, // Persistent - no auto-dismiss
         sound: false // Don't play sound for background service notification
@@ -178,7 +178,7 @@ class ClaraBackgroundService {
     this.isBackgroundMode = false;
     this.backgroundActivityCount = 0;
     this.notifyListeners();
-    console.log('🔄 Clara background service reset');
+    console.log('🔄 BentaraAi background service reset');
   }
 }
 

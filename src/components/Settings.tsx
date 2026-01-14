@@ -477,7 +477,7 @@ const Settings = () => {
   // Add auto-detection when API tab is opened
   useEffect(() => {
     if (effectiveActiveTab === 'api' && !providersLoading) {
-      // Only auto-detect if no providers exist or only Clara's Core exists
+      // Only auto-detect if no providers exist or only BentaraAi's Core exists
       const nonCoreProviders = providers.filter(p => p.type !== 'claras-pocket');
       if (nonCoreProviders.length === 0) {
         autoDetectOllamaProvider();
@@ -1105,7 +1105,7 @@ const Settings = () => {
       case 'ollama':
         return { baseUrl: 'http://localhost:11434/v1', name: 'Ollama' };
       case 'claras-pocket':
-        return { baseUrl: 'http://localhost:8091/v1', name: "Clara's Core" };
+        return { baseUrl: 'http://localhost:8091/v1', name: "BentaraAi's Core" };
       default:
         return { baseUrl: '', name: '' };
     }
@@ -2512,7 +2512,7 @@ const Settings = () => {
                             const samples = [
                               "The quick brown fox jumps over the lazy dog.",
                               "Hello! How can I assist you today?",
-                              "This is a longer sample text to demonstrate how your typography settings affect readability in extended conversations with Clara.",
+                              "This is a longer sample text to demonstrate how your typography settings affect readability in extended conversations With BentaraAi.",
                               "Code: function greet() { return 'Hello World'; }"
                             ];
                             const current = document.querySelector('[data-preview-text]')?.textContent || '';
@@ -2574,7 +2574,7 @@ const Settings = () => {
                           className="text-gray-600 dark:text-gray-400 mb-3"
                           data-preview-text
                         >
-                          The quick brown fox jumps over the lazy dog. This preview demonstrates how your typography settings affect readability and visual appeal in conversations with Clara.
+                          The quick brown fox jumps over the lazy dog. This preview demonstrates how your typography settings affect readability and visual appeal in conversations With BentaraAi.
                         </p>
                         <div className="text-xs text-gray-500 dark:text-gray-400 space-y-1 bg-gray-50 dark:bg-gray-800 rounded p-2">
                           <div className="flex justify-between">
@@ -3674,7 +3674,7 @@ const ProcessButton = () => {
                       Current Version
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Clara {updateInfo?.currentVersion || '1.0.0'} on {updateInfo ? getPlatformName(updateInfo.platform) : 'Unknown Platform'}
+                      Bentara {updateInfo?.currentVersion || '1.0.0'} on {updateInfo ? getPlatformName(updateInfo.platform) : 'Unknown Platform'}
                     </p>
                   </div>
                   <button
@@ -3722,7 +3722,7 @@ const ProcessButton = () => {
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-emerald-900 dark:text-emerald-100 mb-2 text-lg">
-                            🎉 Clara {updateInfo.latestVersion || 'Unknown'} is Available!
+                            🎉 Bentara {updateInfo.latestVersion || 'Unknown'} is Available!
                           </h4>
 
                           {/* Platform-specific messaging */}

@@ -408,7 +408,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
         } else {
           // Default test payload
           requestBody = JSON.stringify({
-            message: 'Test webhook from ClaraVerse',
+            message: 'Test webhook from BentaraAi',
             timestamp: new Date().toISOString(),
           });
         }
@@ -691,7 +691,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                     <div>
                       <h5 className="font-medium text-gray-900 dark:text-white">Turn into AI Tool</h5>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                        Create a Clara Assistant tool from this webhook
+                        Create a Bentara AiAssistant tool from this webhook
                       </p>
                     </div>
                     <button
@@ -729,7 +729,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                       value={toolDescription}
                       onChange={(e) => setToolDescription(e.target.value)}
                       rows={3}
-                      placeholder="This tool allows Clara to..."
+                      placeholder="This tool allows Bentara Aito..."
                       className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500 dark:bg-gray-800 dark:text-white text-sm"
                     />
                   </div>
@@ -798,7 +798,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium text-gray-900 dark:text-white flex items-center gap-2">
               <Settings2 className="w-5 h-5" />
-              Clara Tools
+              Bentara AiTools
             </h3>
             <button
               onClick={() => setShowToolsList(false)}
@@ -891,7 +891,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                 <div className="absolute inset-0 rounded-full bg-yellow-400/20 blur-sm animate-pulse" />
               </div>
               <h3 className="text-lg font-medium text-gray-900 dark:text-white">
-                Tips to make the most of N8N in ClaraVerse
+                Tips to make the most of N8N in BentaraAi
               </h3>
             </div>
             <button
@@ -920,10 +920,10 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                   </div>
                   <div className="flex-1 space-y-3">
                     <h5 className="font-semibold text-gray-900 dark:text-white">
-                      N8N + ClaraCore Models Base URL
+                      N8N + Bentara Ai Models Base URL
                     </h5>
                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                      Use this URL to make your workflow requests to ClaraCore models:
+                      Use this URL to make your workflow requests to Bentara Ai models:
                     </p>
                     <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-600">
                       <code className="flex-1 text-sm font-mono text-gray-900 dark:text-gray-100">
@@ -961,7 +961,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-sakura-500" />
-              <h4 className="font-medium text-gray-900 dark:text-white">Creating Powerful Clara Tools</h4>
+              <h4 className="font-medium text-gray-900 dark:text-white">Creating Powerful Bentara AiTools</h4>
             </div>
             
             <div className="p-5 bg-gradient-to-br from-sakura-50 to-sakura-100 dark:from-sakura-900/20 dark:to-sakura-800/30 rounded-xl border border-sakura-200 dark:border-sakura-800">
@@ -972,10 +972,10 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                   </div>
                   <div className="flex-1 space-y-3">
                     <h5 className="font-semibold text-gray-900 dark:text-white">
-                      Webhook → Clara Assistant Tools
+                      Webhook → Bentara Ai Tools
                     </h5>
                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                      Transform your N8N workflows into Clara's superpowers:
+                      Transform your N8N workflows into Bentara Ai's superpowers:
                     </p>
                     <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
                       <li className="flex items-center gap-3">
@@ -988,11 +988,11 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                       </li>
                       <li className="flex items-center gap-3">
                         <div className="w-1.5 h-1.5 bg-sakura-400 rounded-full"></div>
-                        Convert to Clara tools with one click
+                        Convert to Bentara Ai tools with one click
                       </li>
                       <li className="flex items-center gap-3">
                         <div className="w-1.5 h-1.5 bg-sakura-400 rounded-full"></div>
-                        Ask Clara to use your workflows!
+                        Ask Bentara Ai to use your workflows!
                       </li>
                     </ul>
                   </div>
@@ -1062,7 +1062,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                     <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-3">
                       <li className="flex items-start gap-3">
                         <span className="text-sakura-500 font-bold text-sm mt-0.5">•</span>
-                        <span className="leading-relaxed">Always test webhooks before creating Clara tools</span>
+                        <span className="leading-relaxed">Always test webhooks before creating Bentara Aitools</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-sakura-500 font-bold text-sm mt-0.5">•</span>
@@ -1070,7 +1070,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-sakura-500 font-bold text-sm mt-0.5">•</span>
-                        <span className="leading-relaxed">Your Clara tools work across all chat conversations</span>
+                        <span className="leading-relaxed">Your Bentara Aitools work across all chat conversations</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-sakura-500 font-bold text-sm mt-0.5">•</span>
@@ -1145,9 +1145,9 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                     <button
                       onClick={handleStoreClick}
                       className="relative flex items-center gap-2 px-4 py-1.5 bg-white dark:bg-black rounded-full group"
-                      title="Open ClaraVerse Store"
+                      title="Open BentaraAi Store"
                     >
-                      <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Workflow Templates for n8n</span>
+                      <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Workflow Templates for Bentara Ai</span>
                       <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
                         Browse all workflows and integrations
                       </div>
@@ -1155,7 +1155,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                     {showNewFeatureTag && (
                       <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 whitespace-nowrap">
                         <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg flex items-center gap-1">
-                          New Feature - Explore ClaraVerse Store!
+                          New Feature - Explore BentaraAi Store!
                         </div>
                       </div>
                     )}
@@ -1294,7 +1294,7 @@ const N8N: React.FC<N8NProps> = ({ onPageChange }) => {
                   Tool Created Successfully!
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Your tool is now part of Clara Chat. Ask Clara to do certain things and it will use your workflow to help you accomplish tasks.
+                  Your tool is now part of Bentara Ai Chat. Ask Bentara Ai to do certain things and it will use your workflow to help you accomplish tasks.
                 </p>
               </div>
               <button

@@ -3419,7 +3419,7 @@ ${cmdLine}`;
       log.info('⏱️ Final preparation before spawning process...');
       await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second final delay
 
-      this.setStartupPhase('Launching Clara\'s Pocket...');
+      this.setStartupPhase('Launching BentaraAI\'s Pocket...');
       this.process = spawn(this.binaryPaths.llamaSwap, args, {
         stdio: ['ignore', 'pipe', 'pipe'],
         env: this.platformManager.getPlatformEnvironment(),
@@ -7374,7 +7374,7 @@ ${cmdLine}`;
       await new Promise(resolve => setTimeout(resolve, 1000));
 
       // Start the process
-      this.setStartupPhase('Launching Clara\'s Pocket...');
+      this.setStartupPhase('Launching BentaraAI\'s Pocket...');
       this.process = spawn(this.binaryPaths.llamaSwap, args, {
         stdio: ['ignore', 'pipe', 'pipe'],
         env: this.platformManager.getPlatformEnvironment(),

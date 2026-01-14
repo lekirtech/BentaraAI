@@ -30,7 +30,7 @@ export const setupGlobalErrorHandlers = () => {
   });
 };
 
-// Show a global error message overlay with Clara's theme
+// Show a global error message overlay With BentaraAi's theme
 const showGlobalErrorMessage = (message: string) => {
   // Check if an error overlay already exists
   if (document.getElementById('global-error-overlay')) {

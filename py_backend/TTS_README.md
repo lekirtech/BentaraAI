@@ -185,7 +185,7 @@ curl -X POST "http://localhost:8000/synthesize" \
   --output test_speech.wav
 ```
 
-## 🎯 Integration with Clara Voice Chat
+## 🎯 Integration With BentaraAi Voice Chat
 
 The TTS system integrates seamlessly with Clara's voice chat:
 

@@ -478,7 +478,7 @@ class EnhancedPlatformUpdateService {
       if (Notification.isSupported()) {
         const notification = new Notification({
           title: `Clara ${updateInfo.latestVersion} Available`,
-          body: `A new version of Clara is ready to download. Click to view details.`,
+          body: `A new version of Bentara Ai is ready to download. Click to view details.`,
           icon: path.join(__dirname, '../assets/icons/icon.png'), // Adjust path as needed
           silent: false
         });
@@ -1041,8 +1041,8 @@ class EnhancedPlatformUpdateService {
           : (hasBreakingChanges ? '⚠️ Important Update Available' : '📦 Update Available');
           
         const dialogMessage = updateInfo.isPrerelease
-          ? `Clara ${latestVersion} Beta is ready to download`
-          : `Clara ${latestVersion} is ready to download`;
+          ? `BentaraAI ${latestVersion} Beta is ready to download`
+          : `BentaraAI ${latestVersion} is ready to download`;
         
         return await dialog.showMessageBox({
           type: 'info',

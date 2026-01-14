@@ -84,13 +84,13 @@ const NotificationPanel: React.FC<NotificationPanelProps> = ({ className = '', o
 
   const handleBackgroundNotificationClick = (notification: ClaraNotification) => {
     // If it's a background Clara notification, navigate to Clara and mark as read
-    if (notification.title.includes('Clara Response Ready') && onNavigateToClara) {
+    if (notification.title.includes('BentaraAi Response Ready') && onNavigateToClara) {
       onNavigateToClara();
       handleMarkAsRead(notification.id);
       setIsOpen(false);
     }
     // If it's the background service notification, navigate to Clara but don't mark as read
-    else if (notification.title.includes('Clara Assistant Active') && onNavigateToClara) {
+    else if (notification.title.includes('BentaraAi Assistant Active') && onNavigateToClara) {
       onNavigateToClara();
       setIsOpen(false);
     }
@@ -125,11 +125,11 @@ const NotificationPanel: React.FC<NotificationPanelProps> = ({ className = '', o
   };
 
   const isBackgroundServiceNotification = (notification: ClaraNotification) => {
-    return notification.title.includes('Clara Assistant Active');
+    return notification.title.includes('BentaraAi Assistant Active');
   };
 
   const isClaraResponseNotification = (notification: ClaraNotification) => {
-    return notification.title.includes('Clara Response Ready');
+    return notification.title.includes('BentaraAi Response Ready');
   };
 
   const formatTime = (timestamp: Date) => {
@@ -274,9 +274,9 @@ const NotificationPanel: React.FC<NotificationPanelProps> = ({ className = '', o
                     onClick={() => handleBackgroundNotificationClick(notification)}
                     title={
                       isClaraResponse 
-                        ? 'Click to go to Clara chat' 
+                        ? 'Click to go to BentaraAi chat' 
                         : isBackgroundService 
-                        ? 'Clara is running in background - click to go to Clara'
+                        ? 'BentaraAi is running in background - click to go to BentaraAi'
                         : undefined
                     }
                     className={`p-4 border-b border-gray-200/30 dark:border-gray-700/30 last:border-b-0 hover:bg-gray-100/50 dark:hover:bg-gray-700/20 transition-colors ${
@@ -352,13 +352,13 @@ const NotificationPanel: React.FC<NotificationPanelProps> = ({ className = '', o
                             </span>
                           )}
                           {isBackgroundService && (
-                            <span className="text-xs text-green-600 dark:text-green-400 font-medium" title="Click to go to Clara">
+                            <span className="text-xs text-green-600 dark:text-green-400 font-medium" title="Click to go to BentaraAi">
                               Background Service
                             </span>
                           )}
                           {isClaraResponse && (
-                            <span className="text-xs text-sakura-600 dark:text-sakura-400 font-medium" title="Click to go to Clara">
-                              → Clara
+                            <span className="text-xs text-sakura-600 dark:text-sakura-400 font-medium" title="Click to go to BentaraAi">
+                              → BentaraAi
                             </span>
                           )}
                         </div>

@@ -111,7 +111,7 @@ class ErrorBoundary extends Component<Props, State> {
                   </div>
                 </div>
 
-                {/* Action buttons with Clara's personality */}
+                {/* Action buttons With BentaraAi's personality */}
                 <div className="space-y-3">
                   <button
                     onClick={this.handleHardRefresh}

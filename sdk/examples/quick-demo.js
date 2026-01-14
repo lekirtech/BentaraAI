@@ -36,7 +36,7 @@ const simpleFlow = {
       id: 'input-1',
       type: 'input',
       name: 'User Message',
-      data: { inputType: 'string', defaultValue: 'Hello Clara!' },
+      data: { inputType: 'string', defaultValue: 'Hello BentaraAi!' },
       inputs: [],
       outputs: [{ id: 'output', name: 'Value', type: 'output', dataType: 'string' }]
     },
@@ -344,7 +344,7 @@ console.log('✅ Multiple input methods supported');
 console.log('✅ Error handling is robust');
 console.log('');
 console.log('📚 Check the README.md for detailed documentation!');
-console.log('🚀 Ready to build amazing AI workflows with Clara Flow SDK!');
+console.log('🚀 Ready to build amazing AI workflows With BentaraAi Flow SDK!');
 
 // Get execution statistics
 const stats = runner.getStats();

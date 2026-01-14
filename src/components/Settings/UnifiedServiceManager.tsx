@@ -477,7 +477,7 @@ const UnifiedServiceManager: React.FC = () => {
   const coreServices: CoreService[] = [
     {
       id: 'clara-core',
-      name: 'Clara Core',
+      name: 'Bentara Ai',
       description: 'AI engine with local model management and llama.cpp',
       icon: Bot,
       status: 'running',
@@ -1263,7 +1263,7 @@ const UnifiedServiceManager: React.FC = () => {
                 Service Management
               </h2>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Monitor and control all ClaraVerse services from one place
+                Monitor and control all Bentara AI services from one place
               </p>
             </div>
           </div>
@@ -1305,7 +1305,7 @@ const UnifiedServiceManager: React.FC = () => {
               Core Services
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Essential services that power Clara's AI capabilities
+              Essential services that power Bentara AI's capabilities
             </p>
           </div>
         </div>

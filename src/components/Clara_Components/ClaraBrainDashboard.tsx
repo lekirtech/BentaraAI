@@ -611,7 +611,7 @@ const ClaraBrainDashboard: React.FC = () => {
                 No memories yet
               </h4>
               <p className="text-gray-500 dark:text-gray-500">
-                Start chatting with Clara to create some memories!
+                Start chatting With BentaraAi to create some memories!
               </p>
             </div>
           )}

@@ -40,7 +40,7 @@ const TEMPLATE_GENERATION_SCHEMA = {
           },
           content: {
             type: "string",
-            description: "Complete HTML document with Clara's font, Tailwind CSS, Font Awesome, inline CSS, and inline JavaScript"
+            description: "Complete HTML document With BentaraAi's font, Tailwind CSS, Font Awesome, inline CSS, and inline JavaScript"
           },
           description: {
             type: "string",

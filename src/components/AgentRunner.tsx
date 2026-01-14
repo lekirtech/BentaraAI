@@ -510,7 +510,7 @@ const AgentRunnerContent: React.FC<AgentRunnerProps> = ({ agentId, onClose, onPa
       console.log('📤 SDK Inputs prepared:', sdkInputs);
 
       // 🎯 Execute using Clara Flow SDK - COMPLETELY ISOLATED
-      console.log('⚡ Executing flow with Clara Flow SDK...');
+      console.log('⚡ Executing flow With BentaraAi Flow SDK...');
       const executionResult = await runner.executeFlow(sdkFlowData, sdkInputs);
       
       console.log('🎉 SDK Execution completed!');
@@ -955,7 +955,7 @@ const AgentRunnerContent: React.FC<AgentRunnerProps> = ({ agentId, onClose, onPa
                     {isLoading ? (
                       <div className="flex items-center justify-center gap-2">
                         <Loader2 className="w-4 h-4 animate-spin" />
-                        Executing with Clara Flow SDK...
+                        Executing With BentaraAi Flow SDK...
                       </div>
                     ) : (
                       <div className="flex items-center justify-center gap-2">

@@ -91,7 +91,7 @@ const SERVICE_DEFINITIONS = {
 
   // LlamaSwap Service (Clara's AI model manager)
   llamaswap: {
-    name: "Clara's Core AI Engine",
+    name: "BentaraAi's Core AI Engine",
     type: 'binary',
     critical: true,
     autoRestart: true,

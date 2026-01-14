@@ -1,7 +1,7 @@
 /**
- * Clara Assistant Tools System
+ * BentaraAi Assistant Tools System
  * 
- * This file defines the default tools available to Clara Assistant
+ * This file defines the default tools available to BentaraAi Assistant
  * and provides utilities for tool management and execution.
  */
 
@@ -71,7 +71,7 @@ const timeTools: ClaraTool[] = [
     },
     isEnabled: true,
     version: '1.0.0',
-    author: 'Clara Assistant'
+    author: 'BentaraAi Assistant'
   }
 ];
 
@@ -132,7 +132,7 @@ const mathTools: ClaraTool[] = [
     },
     isEnabled: true,
     version: '1.0.0',
-    author: 'Clara Assistant'
+    author: 'BentaraAi Assistant'
   },
   {
     id: 'convert_units',
@@ -220,7 +220,7 @@ const mathTools: ClaraTool[] = [
     },
     isEnabled: true,
     version: '1.0.0',
-    author: 'Clara Assistant'
+    author: 'BentaraAi Assistant'
   }
 ];
 
@@ -273,7 +273,7 @@ const fileTools: ClaraTool[] = [
     },
     isEnabled: true,
     version: '1.0.0',
-    author: 'Clara Assistant'
+    author: 'BentaraAi Assistant'
   }
 ];
 
@@ -345,7 +345,7 @@ const systemTools: ClaraTool[] = [
     },
     isEnabled: true,
     version: '1.0.0',
-    author: 'Clara Assistant'
+    author: 'BentaraAi Assistant'
   }
 ];
 

@@ -1,8 +1,8 @@
 /**
- * Clara Assistant Type Definitions
+ * BentaraAi assistant Type Definitions
  * 
  * This file contains all TypeScript interfaces and types used throughout
- * the Clara assistant chat system. It's designed to be completely isolated
+ * the BentaraAi assistant chat system. It's designed to be completely isolated
  * and self-contained.
  */
 
@@ -11,7 +11,7 @@
 // ================================
 
 /**
- * Represents a single chat message in the Clara assistant
+ * Represents a single chat message in the BentaraAi assistant
  */
 export interface ClaraMessage {
   /** Unique identifier for the message */
@@ -220,7 +220,7 @@ export interface ClaraMessageMetadata {
 // ================================
 
 /**
- * Supported file types for Clara assistant
+ * Supported file types for BentaraAi assistant
  */
 export type ClaraFileType = 'image' | 'pdf' | 'code' | 'document' | 'text' | 'csv' | 'json';
 
@@ -385,7 +385,7 @@ export interface ClaraArtifact {
 // ================================
 
 /**
- * A complete chat session with Clara
+ * A complete chat session With BentaraAi
  */
 export interface ClaraChatSession {
   /** Unique identifier for the session */
@@ -1084,4 +1084,4 @@ export interface ClaraAutonomousAgentConfig {
 // ================================
 
 // All types and interfaces are exported individually above
-// This file serves as the central type definition hub for Clara Assistant 
+// This file serves as the central type definition hub for BentaraAi assistant 

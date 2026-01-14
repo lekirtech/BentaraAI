@@ -1,7 +1,7 @@
 /**
  * useMemoryManager.ts
  * 
- * React hook for integrating with Clara's memory management system.
+ * React hook for integrating With BentaraAi's memory management system.
  * Provides reactive state management and event-driven updates.
  */
 

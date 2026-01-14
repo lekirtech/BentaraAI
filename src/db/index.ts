@@ -1376,14 +1376,14 @@ export class LocalStorageDB {
       // Get fresh providers list after cleanup
       const updatedProviders = await this.getAllProviders();
       
-      // Check if Clara's Core exists
+      // Check if BentaraAi's Core exists
       const clarasCoreExists = updatedProviders.some(p => p.type === 'claras-pocket');
       
-      // Create Clara's Core if it doesn't exist - this should be the primary provider
+      // Create BentaraAi's Core if it doesn't exist - this should be the primary provider
       if (!clarasCoreExists) {
         console.log('No Clara\'s Core found, creating one...');
         await this.addProvider({
-          name: "Clara's Core",
+          name: "BentaraAi's Core",
           type: 'claras-pocket',
           baseUrl: 'http://localhost:8091/v1',
           isEnabled: true,
@@ -1416,7 +1416,7 @@ export class LocalStorageDB {
               baseUrl: 'http://localhost:11434/v1',
               apiKey: 'ollama', // Ollama doesn't require a real API key
               isEnabled: true,
-              isPrimary: false, // Clara's Core should remain primary
+              isPrimary: false, // BentaraAi's Core should remain primary
               config: {
                 description: 'Local Ollama installation detected automatically'
               }
@@ -1432,7 +1432,7 @@ export class LocalStorageDB {
         console.log('Ollama provider already exists, skipping creation');
       }
       
-      // Ensure at least one provider is primary (should be Clara's Core)
+      // Ensure at least one provider is primary (should be BentaraAi's Core)
       const finalProviders = await this.getAllProviders();
       const primaryProvider = finalProviders.find(p => p.isPrimary);
       if (!primaryProvider) {
